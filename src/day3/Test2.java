@@ -19,3 +19,18 @@ public class Test2 {
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+//cars["audi","Honda pvt ltd", "Mahindra pvt ltd", "BMW"]
+//output["audi","Honda pvt ltd, India", "Mahindra pvt ltd, India", "BMW"]
