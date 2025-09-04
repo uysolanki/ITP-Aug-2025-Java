@@ -25,5 +25,4 @@ public class StudentArrayOfObject {
 		batch[i].displyStudent();
 		}
 	}
-
 }
