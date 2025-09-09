@@ -7,20 +7,18 @@ public class MergeSortDemo{
 	public static void main(String[] args) {
 		int arr[]= {9,3,8,1,7,4,5,2};
 		System.out.println("Before Sorting "+Arrays.toString(arr));
-		split(arr,0,arr.length-1);
+		mergeSort(arr,0,arr.length-1);
 		System.out.println("After Sorting "+Arrays.toString(arr));
 	}
 
-	private static void split(int[] arr, int first, int last) {
-		
+	public static void mergeSort(int[] arr, int first, int last) {
 		if(first<last)
 		{
 		int mid=(first+last)/2;
-		split(arr,first,mid);
-		split(arr,mid+1,last);
+		mergeSort(arr,first,mid);
+		mergeSort(arr,mid+1,last);
 		merge(arr,first,mid,last);
-		}
-			
+		}		
 	}
 
 	private static void merge(int[] arr, int first, int mid, int last) {
@@ -31,7 +29,7 @@ public class MergeSortDemo{
 		
 		while(i<=mid && j<=last)
 		{
-			if(arr[i]<=arr[j])
+			if(arr[i]>=arr[j])
 			{
 				brr[k]=arr[i];
 				i++;
