@@ -3,6 +3,8 @@ package day4;
 public class StudentApp {
 
 	public static void main(String[] args) {
+		Student.demo();
+		
 		Student s1=new Student();
 		Student s2=new Student();
 		Student s3=new Student();
@@ -18,6 +20,8 @@ public class StudentApp {
 		s1.displyStudent();
 		s2.displyStudent();
 		s3.displyStudent();
+		
+		
 	}
 
 }

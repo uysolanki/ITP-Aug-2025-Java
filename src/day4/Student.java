@@ -1,13 +1,19 @@
 package day4;
 
 import java.util.Scanner;
+import static java.lang.Math.*;
 
 public class Student {
-
 	private int rno;				//instance variable/scope
 	private String sname;
 	private double per;
 	
+	private static String principalName; 
+	private static final int YOE=1997;
+	
+	static {
+		principalName="Tom";
+	}
 	public void acceptStudent()
 	{
 		rno=18;
@@ -36,5 +42,18 @@ public class Student {
 		Student s4=new Student();
 		s4.displyStudent();
 		s4.sname="Akash";
+	}
+	
+	public static void demo()
+	{
+		int k;
+		System.out.println(Student.principalName);
+		System.out.println(Student.YOE);
+	}
+	
+	void areaCircle()
+	{
+		System.out.println(Math.PI*5*5);
+		int age=Math.abs(2000-2025);
 	}
 }
