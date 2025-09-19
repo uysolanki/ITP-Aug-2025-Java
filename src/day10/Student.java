@@ -12,20 +12,20 @@ public class Student {
 			this.per=78.5;
 		}
 		
-		public Student(int a,String b,double c)		// Parameterised Constructor
-		{
-			this.rno=a;
-			this.sname=b;
-			this.per=c;
-		}
+//		public Student(int rno,String sname,double per)		// Parameterised Constructor
+//		{
+//			this.rno=rno;
+//			this.sname=sname;
+//			this.per=per;
+//		}
 		
-		public Student(int a,double c,String b)		// Parameterised Constructor
-		{
-			this.rno=a;
-			this.sname=b;
-			this.per=c;
+		public Student(int rno, String sname, double per) {
+			this.rno = rno;
+			this.sname = sname;
+			this.per = per;
 		}
-		
+
+	
 		public Student(Student stud)		// Copy Constructor
 		{
 			stud.rno=333;
@@ -34,6 +34,7 @@ public class Student {
 			this.per=stud.per;
 		}
 		
+	
 		@Override
 		public String toString() {
 			return "Student [rno=" + rno + ", sname=" + sname + ", per=" + per + "]";
