@@ -1,6 +1,6 @@
 package day11;
 
-public class Employee extends Person
+public class Employee extends Person                                          //sub class
 {
 
 	protected int eno;			//total 6
@@ -8,15 +8,15 @@ public class Employee extends Person
 	protected double sal;
 	
 	
-	public Employee()
+	public Employee()														//no args constructor
 	{
-		super();   //no args constructor of the super class Person
+		super();   //invoking the no args constructor of the super class Person
 		this.eno=101;
 		this.desg="Manager";
 		this.sal=8000.0;
 	}
 	
-	public Employee(int adharNo, String name, int age,int eno,String desg,double sal)
+	public Employee(int adharNo, String name, int age,int eno,String desg,double sal) //para construtor
 	{
 		super(adharNo,name,age); //Parameterised constructor of the super class Person
 		this.eno=eno;
@@ -46,6 +46,14 @@ public class Employee extends Person
 
 	public void setSal(double sal) {
 		this.sal = sal;
+	}
+	
+	public void displayEmployee()
+	{	
+		System.out.println("Emp No is "+this.eno);
+		System.out.println("Designation is "+this.desg);
+		System.out.println("Salary is "+this.sal);
+		super.displayPerson();
 	}
 
 	@Override

@@ -43,6 +43,13 @@ public class Person {
 		this.age = age;
 	}
 
+	
+	public void displayPerson()
+	{
+		System.out.println("Adhar No is "+this.adharNo);
+		System.out.println("Name is "+this.name);
+		System.out.println("Age is "+this.age);
+	}
 	@Override
 	public String toString() {
 		return "Person [adharNo=" + adharNo + ", name=" + name + ", age=" + age + "]";
