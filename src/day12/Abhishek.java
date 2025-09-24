@@ -10,6 +10,7 @@ public class Abhishek extends Amitabh
 	@Override
 	public void car() {
 		System.out.println("BMW");
+		System.out.println(super.SURNAME);
 	}
 	
 }

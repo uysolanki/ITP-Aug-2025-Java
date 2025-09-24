@@ -56,7 +56,10 @@ public class Person {
 	}
 	
 	
-	
+	@Override
+	protected void finalize() throws Throwable {
+		System.out.println("Object Destroyed");
+	}
 
 	
 }
