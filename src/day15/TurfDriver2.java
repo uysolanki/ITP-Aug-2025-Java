@@ -46,7 +46,6 @@ public class TurfDriver2 {
 		System.out.println("Time Of Play :"+timeOfPlay);
 		System.out.println("Turf Type : "+turfName);
 		System.out.println("Price : "+turfPrice);
-
 	}
 
 }

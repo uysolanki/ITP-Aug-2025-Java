@@ -6,7 +6,7 @@ public class Circle implements Shape
 	@Override
 	public void area() {
 		int radius=5;
-		double result=Math.PI*radius*radius;
+		double result=PI*radius*radius;
 		System.out.println("Area Of Circle is "+result);
 		
 	}
@@ -14,7 +14,7 @@ public class Circle implements Shape
 	@Override
 	public void perimeter() {
 		int radius=5;
-		double result=2*Math.PI*radius;
+		double result=PI*radius;
 		System.out.println("Perimeter Of Circle is "+result);
 		
 	}
