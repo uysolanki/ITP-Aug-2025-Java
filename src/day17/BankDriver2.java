@@ -2,10 +2,10 @@ package day17;
 
 import java.util.Scanner;
 
-public class BankDriver {
+public class BankDriver2 {
 
 	public static void main(String[] args) {
-		Customer customer=new Customer("virat@gmail.com","Virat123");
+		Customer2 customer=new Customer2("virat@gmail.com","Virat123");
 		
 		Scanner sc=new Scanner(System.in);
 		
@@ -14,8 +14,8 @@ public class BankDriver {
 		
 		System.out.println("Enter Password");
 		String pass=sc.next();
-		
-		if(user.equals(customer.getUsername()) && pass.equals(customer.getPassword()))
+	
+		if(customer.login(user, pass))
 		{
 			HDFCBank bank=new HDFCBank();
 			int choice;

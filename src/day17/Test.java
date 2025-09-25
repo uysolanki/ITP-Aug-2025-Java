@@ -1,0 +1,16 @@
+package day17;
+
+import java.util.Random;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Random random=new Random(); 		//max               min		smallest 6 digit
+		int randomNumber=random.nextInt(100000);		//99999             0       9865+100000         =109865
+		System.out.println(randomNumber);
+		int otp= randomNumber+100000;
+		System.out.println(otp);
+
+	}
+
+}

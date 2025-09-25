@@ -1,11 +1,11 @@
 package day17;
 
-public class Customer {
+public class Customer2 {
 		private String username;
 		private String password;
 		
-		public Customer() {}
-		public Customer(String username, String password) {
+		public Customer2() {}
+		public Customer2(String username, String password) {
 			this.username = username;
 			this.password = password;
 		}
@@ -26,5 +26,15 @@ public class Customer {
 		public String toString() {
 			return "Customer [username=" + username + ", password=" + password + "]";
 		}
+		
+		
+		public boolean login(String user,String pass)
+		{
+			if(user.equals(this.username) && pass.equals(this.password))
+				return true;
+			else
+				return false;
+		}
+		
 		
 }
