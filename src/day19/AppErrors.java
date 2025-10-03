@@ -4,7 +4,7 @@ public enum AppErrors
 {
 
 	ERR1("ERR-01","%s is an Invalid Username"),
-	ERR2("ERR-01","Invalid Password");
+	ERR2("ERR-02","Invalid Password");
 	
 	private String errorCode;
 	private String errorMessage;
