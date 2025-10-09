@@ -17,12 +17,12 @@ public class DefaultExceptionHandling {
 		System.out.println("Enter Denominator");
 		int denominator=sc.nextInt();
 		
-		String name=null;
-		System.out.println(name.length());
+//		String name=null;
+//		System.out.println(name.length());
 		
 		double result=numerator/denominator;
 		
-		System.out.println(result);
+		System.out.println(result);   //5.0
 		}
 		
 		catch(InputMismatchException e1)
@@ -39,10 +39,9 @@ public class DefaultExceptionHandling {
 			System.out.println("Some error Occured");
 		}
 		
-		finally
-		{
-			System.out.println("Thank You!!, Visit Again");
-		}
+		
+		System.out.println("Thank You!!, Visit Again");
+		
 	}
 
 }
