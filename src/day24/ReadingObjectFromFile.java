@@ -1,0 +1,26 @@
+package day24;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+
+public class ReadingObjectFromFile {
+
+	public static void main(String[] args) throws IOException, ClassNotFoundException {
+	
+	String fileName="myfolder/file3.txt";
+	Student s1=null;
+	
+	FileInputStream fis=new FileInputStream(fileName);
+	
+	ObjectInputStream ois=new ObjectInputStream(fis);
+	
+	s1=(Student)ois.readObject();
+	fis.close();
+	ois.close();
+	
+	System.out.println(s1);
+
+	}
+
+}
