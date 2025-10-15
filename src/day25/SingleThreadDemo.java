@@ -10,5 +10,4 @@ public class SingleThreadDemo {
 			System.out.println("\t" +i);
 
 	}
-
 }
