@@ -10,6 +10,7 @@ public class Father extends Thread
 	
 	@Override
 	public void run() {
-		this.bank.deposit(7000);
+		this.bank.deposit(4000);
+		this.bank.deposit(4000);
 	}
 }

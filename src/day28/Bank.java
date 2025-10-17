@@ -9,6 +9,7 @@ public class Bank {
 	{
 		this.balance=bal;
 	}
+	
 	public double getBalance() {
 		return balance;
 	}
@@ -27,7 +28,7 @@ public class Bank {
 	
 	public synchronized void withdraw(int wAmt) 
 	{
-		if(wAmt>this.balance)
+		do
 		{
 			System.out.println("Insufficient Funds " + getBalance());
 			try {
@@ -35,7 +36,7 @@ public class Bank {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-		}
+		}while(wAmt>this.balance);
 		this.balance-=wAmt;
 		System.out.println("Withdraw Successful " + getBalance());
 	}
