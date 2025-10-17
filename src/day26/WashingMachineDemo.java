@@ -8,7 +8,7 @@ public class WashingMachineDemo {
 		Dry thread3=new Dry();
 		
 		thread1.start();
-		thread1.join(4000,10);
+		thread1.join(4000);
 		thread2.start();
 		thread2.join();
 		thread3.start();
