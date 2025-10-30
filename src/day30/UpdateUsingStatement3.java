@@ -13,7 +13,7 @@ public static void main(String[] args) throws Exception
 	
 	Statement st=connection.createStatement();
 	
-	String query="update emp set sal=sal-500 where eno in(1,2,5)";
+	String query="update emp set sal=sal-500 where sal<1000";
 	try
 	{
 	int rows=st.executeUpdate(query);
