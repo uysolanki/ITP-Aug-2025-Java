@@ -1,0 +1,12 @@
+public boolean add(Object o);
+public boolean add(int index,Object o);
+public boolean remove(Object o);
+public boolean remove(int index);
+public int size();
+public void clear();
+public boolean isEmpty();
+public boolean contains(Object o);
+public boolean addAll(Collection c)
+public boolean removeAll(Collection c)
+public boolean retainAll(Collection c)
+
