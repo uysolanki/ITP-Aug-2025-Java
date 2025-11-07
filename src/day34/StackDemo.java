@@ -19,7 +19,7 @@ public class StackDemo {
 		System.out.println(a1.pop());			//size=2
 		System.out.println(a1.size());
 		
-		
+		//"madam"  - palindrome yes  using stack
 
 	}
 
