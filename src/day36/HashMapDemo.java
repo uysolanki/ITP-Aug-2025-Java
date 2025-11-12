@@ -18,6 +18,7 @@ public class HashMapDemo {
 		
 		System.out.println("Ben".hashCode());
 		System.out.println("ben".hashCode());
+		
 		double sum=0;
 		for(Entry<String,Double> emp:emps.entrySet())
 		{
