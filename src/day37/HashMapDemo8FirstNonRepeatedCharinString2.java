@@ -3,7 +3,6 @@ package day37;
 import java.util.HashMap;
 import java.util.Map;
 
-
 public class HashMapDemo8FirstNonRepeatedCharinString2 {
 public static void main(String[] args) {
 	
