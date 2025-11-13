@@ -2,7 +2,13 @@ package day37;
 
 public class Student // implements Comparable<Student>
 {
-	private int rno;
+	private int rno;				//variable
+	
+	public void setRno(int rno) {   //method which will modify
+		this.rno = rno;
+	}
+	
+	
 	private String sname;
 	private double per;
   

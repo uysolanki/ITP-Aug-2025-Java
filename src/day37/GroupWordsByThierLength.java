@@ -14,12 +14,16 @@ public static void main(String[] args) {
 	
 	Map<String,Integer> hashmap=new HashMap();
 	
+	List<List<String>> finalResult=new ArrayList();
 	for(String n:arr)
 	{
 		hashmap.put(n, hashmap.getOrDefault(n, 0)+1 );
 	}
 	
 	System.out.println(hashmap);
+	
+	for(Entry<>)
+	
 	
 }
 }
