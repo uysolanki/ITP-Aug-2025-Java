@@ -33,6 +33,9 @@ public class StreamAPIDemo {
 		Map<String,List<String>> anagramGroups1= words.stream().collect(Collectors.groupingBy(StreamAPIDemo::generateKey));
 
 		System.out.println(anagramGroups1.values());
+		
+		
+		
 	}
 	
 	public static String generateKey(String str)
