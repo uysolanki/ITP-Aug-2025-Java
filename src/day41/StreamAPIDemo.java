@@ -3,98 +3,50 @@ package day41;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class StreamAPIDemo {
 
 	public static void main(String[] args) {
-//		List<Integer> numbers = new ArrayList(Arrays.asList(1,2,3,4,5));
-		
-//		List<Integer> sqrNumbers= numbers.stream().map((num)->num*num).collect(Collectors.toList());
-//		System.out.println(sqrNumbers);
-		
-//		numbers.stream().map((num)->num*num).forEach((num)->System.out.println(num));
-//		
+	
 		List<String> months=new ArrayList(Arrays.asList("January","February","March","April","May","June","July","August","September","October","November","December"));
-//		
-//		
-//		List<String> allCaps=months.stream().map(month->month.toUpperCase()).collect(Collectors.toList());
-//		System.out.println(allCaps);
-//		
-//		List<Integer> allLengths=months.stream().map(month->month.length()).collect(Collectors.toList());
-//		System.out.println(allLengths);
-				
-		
-//		List<String> capsMonthsGreaterThan5=months.stream().filter(month->month.length()>=5).map(month->month.toUpperCase()).collect(Collectors.toList());
-//		System.out.println(capsMonthsGreaterThan5);
-		
-		
-//		List<String> capsMonthsGreaterThan5=months.stream().filter(month->month.length()>=5).map(month->month.toUpperCase()).toList();
-//		System.out.println(capsMonthsGreaterThan5);
-//				
-		
-//		List<String> capsMonthsGreaterThan5=months
-//				.stream()
-//				.filter(month->month.length()>=5)
-//				.map(month->month.toUpperCase())
-//				.toList();
-//		System.out.println(capsMonthsGreaterThan5);
-		
-		
-//		List<String> capsMonthsGreaterThan5abc=months
-//				.stream()
-//				.filter(StreamAPIDemo::checkLength)
-//				.map(StreamAPIDemo::myUpper)
-//				.collect(Collectors.toList());
-//		
-//		System.out.println(capsMonthsGreaterThan5abc);
-		
-		
-//				months
-//				.stream()
-//				.filter(StreamAPIDemo::checkLength)
-//				.map(StreamAPIDemo::myUpper)
-//				.forEach(month->System.out.println(month));
-//		
-		
-//		months
-//		.stream()
-//		.filter(StreamAPIDemo::checkLength)
-//		.map(StreamAPIDemo::myUpper)
-//		.forEach(StreamAPIDemo::display);
-		
-		
-		months
-		.stream()
-		.filter(StreamAPIDemo::checkLength)
-		.map(StreamAPIDemo::myUpper)
-		.forEach(System.out::println);
-		
-		
-		List<Integer> numbers = new ArrayList(Arrays.asList(1,2,3,4,5));
-		numbers.stream().forEach(System.out::println);
-		int sum=numbers.stream().reduce((num,acc)->num+acc).get();
-		System.out.println(sum);
-	}
-	
-	
-	
-	public static boolean checkLength(String str)
-	{
-		if(str.length()>=5)
-			return true;
-		else
-			return false;
-	}
-	
-	public static String myUpper(String str)
-	{
-		return str.toUpperCase();
-	}
-	
-//	public static void display(String str)
-//	{
-//		System.out.println(str);
-//	}
 
+		Map<Boolean,List<String>> hashmap=months.stream().collect(Collectors.partitioningBy(month->month.length()>=5));
+		
+		List<String> list=months.stream().collect(Collectors.partitioningBy(month->month.length()>=5)).get(true);
+		
+		
+		System.out.println(list);
+		
+		Map<Integer,List<String>> hashmap1=months.stream().collect(Collectors.groupingBy(month->month.length()));
+		System.out.println(hashmap1);
+		
+		List<String> words=new ArrayList(Arrays.asList("silent","listen","note","tone","cab","abc","bac","apple"));
+		
+		Map<String,List<String>> anagramGroups= words.stream().collect(Collectors.groupingBy(word->{
+			char arr[]=word.toCharArray();
+			Arrays.sort(arr);
+			return new String(arr);
+		}));
+		
+		Map<String,List<String>> anagramGroups1= words.stream().collect(Collectors.groupingBy(StreamAPIDemo::generateKey));
+
+		System.out.println(anagramGroups1.values());
+	}
+	
+	public static String generateKey(String str)
+	{
+		char arr[]=str.toCharArray();
+		Arrays.sort(arr);
+		return new String(arr);
+	}
 }
+
+
+/*
+eilnst : [silent,listen]
+enot : [note,tone]
+abc : [cba,cab,bca]
+ 
+ */
