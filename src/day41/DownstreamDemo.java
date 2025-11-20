@@ -15,9 +15,11 @@ public class DownstreamDemo {
 		Map<Integer,List<String>> hashmap1=months.stream().collect(Collectors.groupingBy(month->month.length()));
 		System.out.println(hashmap1);
 		
+		//question
 		Map<Integer,String> hashmap2=months.stream().collect(Collectors.groupingBy(month->month.length(),Collectors.joining("-")));
 		System.out.println(hashmap2);
 		
+		//question
 		Map<Integer,List<String>> hashmap3=months.stream().collect(Collectors.groupingBy(month->month.length(),Collectors.mapping(s->s.toUpperCase(),Collectors.toList())));
 		System.out.println(hashmap3);
 
