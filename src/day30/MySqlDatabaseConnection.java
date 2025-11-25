@@ -4,6 +4,19 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class MySqlDatabaseConnection {
+	static Connection connection=null;
+	MySqlDatabaseConnection instance=null;
+	private MySqlDatabaseConnection()
+	{
+	}
+	
+	public MySqlDatabaseConnection getInstance()
+	{
+		if(instance==null)
+			instance=new MySqlDatabaseConnection();
+		
+		return instance;
+	}
 
 	public static Connection getConnection() throws Exception
 	{
@@ -14,7 +27,7 @@ public class MySqlDatabaseConnection {
 		String databaseName="itpaugdb";
 		
 		Class.forName(jdbcDriver);
-		Connection connection = DriverManager.getConnection(databaseUrl+databaseName, username, password);
+		connection = DriverManager.getConnection(databaseUrl+databaseName, username, password);
 		return connection;
 	}
 }
